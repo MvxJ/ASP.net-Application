@@ -1,0 +1,40 @@
+<html>
+<head>
+	<title>Formularz 1</title>
+	<link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/site.css" />
+	<script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Form1 - Prosty formularz (HTML)</h1>
+        <form method="POST" action="/Home/Form1">
+            <div class="form-group row">
+                <div class="col-xs-2">
+                    <label for="Name">Nazwa elementu</label>
+                    <input class="form-control" type="text" id="Name" name="Name">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-xs-2">
+                    <label for="Description">Opis elementu</label>
+                    <input class="form-control" type="text" id="Description" name="Description">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="IsVisible" name="IsVisible" value="true">
+                    <label for="IsVisible">Element widoczny ?</label>
+                </div>
+            </div>
+            <br />
+            <div class="form-group row">
+                <div class="col-xs-2">
+                    <input class="btn btn-primary" type="submit" value="Dodaj element">
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

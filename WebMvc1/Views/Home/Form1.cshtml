@@ -1,0 +1,17 @@
+﻿@model WebMvc1.Models.FormModel
+@{
+    ViewData["Title"] = "Form1";
+}
+
+<div class="text-left">
+    <h1 class="display-4">Dane z formularza</h1>
+    @Html.DisplayNameFor(model => model.Name):          @Html.DisplayFor(model => model.Name)
+    <br />
+    @Html.DisplayNameFor(model => model.Description):   @Html.DisplayFor(model => model.Description)
+    <br />
+    @Html.DisplayNameFor(model => model.IsVisible):     @Html.DisplayFor(model => model.IsVisible)
+</div>
+<br/>
+<a href="/form1.html">Powrót do Form1 (HTML)</a>
+<br />
+<a asp-action="Form2">Powrót do Form2 (Razor)</a>
