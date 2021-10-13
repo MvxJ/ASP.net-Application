@@ -17,11 +17,30 @@ a {
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
+.date-select {
+    margin-top: 5px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.go-back {
+    margin-top: 15px;
+}
+
+.custom-btn {
+    transition: all 0.3s ease-in-out;
+}
+
+.custom-btn:hover {
+    background-color: #fff;
+    color: #1b6ec2;
+}
+
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
 }
 
 /* Sticky footer styles
