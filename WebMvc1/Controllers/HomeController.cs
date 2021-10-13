@@ -39,5 +39,17 @@ namespace WebMvc1.Controllers
         {
             return View(model);
         }
+
+
+        [HttpPost]
+        public IActionResult DaySinceBirth(BirthDateFormModel birthDateFormModel)
+        {
+            return View(birthDateFormModel);
+        }
+
+        public IActionResult Calculate()
+        {
+            return View();
+        }
     }
 }

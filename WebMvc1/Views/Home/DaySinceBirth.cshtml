@@ -1,0 +1,12 @@
+﻿@model WebMvc1.Models.BirthDateFormModel
+@{
+    ViewData["Title"] = "Days since birth";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Days since your birth date !</h1>
+    @Html.DisplayNameFor(birthDateFormModel => birthDateFormModel.BirthDate):
+    @Html.DisplayFor(birthDateFormModel => birthDateFormModel.BirthDate)
+    <br />
+    <a href="/Home/Calculate" class="btn btn-primary">Go back to pick date!</a>
+</div>

@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Calculate days since birth";
+}
+<div class="text-center">
+    <h1>@ViewData["Title"]</h1>
+</div>
+
+<div class="container text-center">
+    <form method="post" action="/Home/DaySinceBirth">
+        <input type="date" name="BirthDate" />
+        <input type="submit" class="btn btn-primary" value="Calculate" />
+    </form>
+</div>
