@@ -18,10 +18,19 @@ a {
   border-color: #1861ac;
 }
 
+.custom-input {
+    max-width: 300px;
+    margin-left: 15px;
+}
+
+.custom-label {
+    width: 100px;
+}
+
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
 }
 
 /* Sticky footer styles

@@ -1,0 +1,27 @@
+@model WebMvc1.Models.NameFormModel
+
+@{
+    ViewData["Title"] = "Display user name - passed in form";
+}
+
+<div class="row text-center">
+    <div class="col-md-12">
+        <h1>@ViewData["Title"]</h1>
+        <p>Insert your name and the number of repetitions in form below:</p>
+        <form asp-controller="NameForm" asp-action="DisplayName" method="post">
+            <div class="form-group">
+                <label asp-for="Name" class="custom-label"></label><input asp-for="Name" class="custom-input" />
+                <br />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Repeat" class="custom-label"></label><input asp-for="Repeat" class="custom-input" />
+                <br />
+                <span asp-validation-for="Repeat" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
