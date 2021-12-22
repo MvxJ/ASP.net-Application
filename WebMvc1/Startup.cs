@@ -10,6 +10,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using WebMvc1.Data;
+using Microsoft.OpenApi.Models;
+using WebMvc1.Models;
 
 namespace WebMvc1
 {
@@ -29,6 +31,19 @@ namespace WebMvc1
 
             services.AddDbContext<WebMvc1Context>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("WebMvc1Context")));
+
+            services.AddSwaggerGen(c =>
+            {
+                c.EnableAnnotations();
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Title = "FilmsApi",
+                    Version = "v1",
+                    Description = "Films ApI, my list of movie suggestions",
+                    Contact = new OpenApiContact { Name = "MJ", Email = "maksymilianjachymczak@gmail.com" },
+                    License = new OpenApiLicense { Name = "GitHub", Url = new System.Uri("https://github.com/MvxJ/ASP.net-Application") }
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -37,6 +52,8 @@ namespace WebMvc1
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseSwagger();
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "FilmsApi v1"));
             }
             else
             {

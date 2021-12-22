@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebMvc1.Data;
 
 namespace WebMvc1.Migrations
 {
     [DbContext(typeof(WebMvc1Context))]
-    partial class WebMvc1ContextModelSnapshot : ModelSnapshot
+    [Migration("20211222171122_AddFilmModel")]
+    partial class AddFilmModel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

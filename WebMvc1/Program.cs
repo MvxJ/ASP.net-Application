@@ -19,6 +19,7 @@ namespace WebMvc1
                 try
                 {
                     SeedData.Initialize(services);
+                    SeedData.InitializeFilms(services);
                 }
                 catch (Exception ex)
                 {
