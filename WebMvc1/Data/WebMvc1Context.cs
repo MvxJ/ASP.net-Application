@@ -15,5 +15,7 @@ namespace WebMvc1.Data
         }
 
         public DbSet<WebMvc1.Models.CarModel> CarModel { get; set; }
+
+        public DbSet<WebMvc1.Models.FilmsModel> FilmsModel { get; set; }
     }
 }

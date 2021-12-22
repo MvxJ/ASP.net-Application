@@ -1,9 +1,9 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace WebMvc1.Migrations.Films
+namespace WebMvc1.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class AddFilmModel : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

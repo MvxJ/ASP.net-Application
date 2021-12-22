@@ -5,13 +5,13 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using WebMvc1.Models;
+using WebMvc1.Data;
 
-namespace WebMvc1.Migrations.Films
+namespace WebMvc1.Migrations
 {
-    [DbContext(typeof(FilmsContext))]
-    [Migration("20211213191445_InitialCreate")]
-    partial class InitialCreate
+    [DbContext(typeof(WebMvc1Context))]
+    [Migration("20211222171122_AddFilmModel")]
+    partial class AddFilmModel
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -20,6 +20,33 @@ namespace WebMvc1.Migrations.Films
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.12")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("WebMvc1.Models.CarModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Brand")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("ManufactureDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<decimal>("Millage")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("Model")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Type")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("CarModel");
+                });
 
             modelBuilder.Entity("WebMvc1.Models.FilmsModel", b =>
                 {

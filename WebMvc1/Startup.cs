@@ -29,9 +29,6 @@ namespace WebMvc1
         {
             services.AddControllersWithViews();
 
-            services.AddDbContext<FilmsContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("FilmsContext")));
-
             services.AddDbContext<WebMvc1Context>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("WebMvc1Context")));
 

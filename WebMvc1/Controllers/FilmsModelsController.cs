@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using WebMvc1.Data;
 using WebMvc1.Models;
 
 namespace WebMvc1.Controllers
@@ -13,9 +14,9 @@ namespace WebMvc1.Controllers
     [ApiController]
     public class FilmsModelsController : ControllerBase
     {
-        private readonly FilmsContext _context;
+        private readonly WebMvc1Context _context;
 
-        public FilmsModelsController(FilmsContext context)
+        public FilmsModelsController(WebMvc1Context context)
         {
             _context = context;
         }
