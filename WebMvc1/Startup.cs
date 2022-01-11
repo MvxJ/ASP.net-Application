@@ -32,6 +32,9 @@ namespace WebMvc1
             services.AddDbContext<WebMvc1Context>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("WebMvc1Context")));
 
+            services.AddDbContext<FakeContext>(opt => opt.UseInMemoryDatabase("fake"));
+
+
             services.AddSwaggerGen(c =>
             {
                 c.EnableAnnotations();
